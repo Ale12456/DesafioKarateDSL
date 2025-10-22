@@ -5,7 +5,7 @@ Feature: Actualizacion de usuarios
 
   @happypath @actualizarUsuario @gian.leiva
   Scenario: Actualizar usuario que existe
-    And path 'usuarios/' + 'OKQGmXiMypxv40wG'
+    And path 'usuarios/' + '0uxuPY0cbmQhpEz1'
     And request read ('classpath:usuarios/request/requestUpdateUser.json')
     When method put
     Then status 200
@@ -14,12 +14,12 @@ Feature: Actualizacion de usuarios
 
   @unhappypath @actualizarUsuario @gian.leiva
   Scenario:Actualizar usuario con email ya existente
-    And path 'usuarios/' + '0uxuPY0cbmQhpEz1'
+    And path 'usuarios/' + 'OKQGmXiMypxv40wG'
     And request
     """
     {
-      "nome": "T",
-      "email": "beltrano@qa.com.br",
+      "nome": "FulanoCambioV2",
+      "email": "bel23445@qa.com.br",
       "password": "teste",
       "administrador": "true"
     }
