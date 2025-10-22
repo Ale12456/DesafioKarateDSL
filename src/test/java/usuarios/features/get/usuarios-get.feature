@@ -21,8 +21,8 @@ Feature: Consultar el listado de usuarios
     When method get
     Then status 200
     And match response == schema
-    And match response.nome == 'Fulano da Silva'
-    And match response.email == 'fulano@qa.com'
+    And match response.nome == 'T'
+    And match response.email == 'beltrano@qa.com.br'
     And print response
 
   @unhappypath @listarUsuarios @gian.leiva
